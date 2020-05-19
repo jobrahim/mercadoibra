@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "mercadoibra": {
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/swiper/css/swiper.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mercadoibra"
+    }
+  },
+  "defaultProject": "mercadoibra",
+  "cli": {
+    "analytics": "8d0b702d-8680-4274-bb1f-b371151c217d"
+  }
 }

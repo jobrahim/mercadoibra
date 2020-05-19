@@ -1,0 +1,14 @@
+
+
+<h3 appHighlight>{{ producto.nombre | uppercase }}</h3>
+<img [src]="producto.imagen" alt="">
+<p> {{ producto.precio | currency }}</p>
+<p> {{ today | date: 'medium' }}</p>
+<p> <strong>Descripción:</strong>  {{ producto.descripcion  | slice:0:50}}</p>
+<button (click)="comprar()">Agregar al carrito </button>
+  
+
+<!--<div *ngFor="let cosa of producto">-->
+    
+    <!--</div>-->
+

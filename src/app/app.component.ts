@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
+import { Products } from './product.model';
+import { ProductComponent } from './components/product.component';
+import {Carrito} from './product.model';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mercadoibra';
+
+
+  carrito: Carrito[] = [
+    {
+      icono: 'assets/images/cart.png'
+    }
+  ];
+
+
+
 }
