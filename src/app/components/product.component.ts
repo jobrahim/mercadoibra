@@ -12,7 +12,7 @@ export class ProductComponent implements OnChanges, OnInit, OnDestroy {
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
     today = new Date();
-    
+
     ngOnInit(){
         console.log('1. ngOnInit');
     }
@@ -22,6 +22,7 @@ export class ProductComponent implements OnChanges, OnInit, OnDestroy {
     ngOnDestroy(){
         console.log('3. ngOnDestroy');
     }
+
     compra = ['pedro', 'juan', 'jose'];
 
     comprar() {

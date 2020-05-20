@@ -6,9 +6,8 @@
 <p> {{ today | date: 'medium' }}</p>
 <p> <strong>Descripción:</strong>  {{ producto.descripcion  | slice:0:50}}</p>
 <button (click)="comprar()">Agregar al carrito </button>
+<p></p>
+<a [routerLink] = "['/products', producto.id]">Ver detalle</a>
   
 
-<!--<div *ngFor="let cosa of producto">-->
-    
-    <!--</div>-->
 
