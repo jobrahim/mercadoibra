@@ -3,20 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product.component';
+import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
-import { HighlightDirective } from './highlight.directive';
-
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
-import { HeaderComponent } from './header/header.component';
-
-import { FooterComponent } from './footer/footer.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
 import { LayoutComponent } from './layout/layout.component';
-
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -25,21 +21,22 @@ import { LayoutComponent } from './layout/layout.component';
     AppComponent,
     ProductComponent,
     CartComponent,
-    HighlightDirective,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
-    HeaderComponent,
-    FooterComponent,
     PagenotfoundComponent,
     ProductsDetailsComponent,
-    LayoutComponent
+    LayoutComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    CoreModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
