@@ -9,7 +9,12 @@ export class DemoComponent implements OnInit {
 
   title = 'mercadoibra';
 
-  ngOnInit(): void {
+  items = ['nicolas', 'julian', 'ramon'];
+
+  ngOnInit() {
   }
 
+  addItem() {
+    this.items.push('nuevo item');
+  }
 }

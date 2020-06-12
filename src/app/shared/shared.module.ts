@@ -10,14 +10,16 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
+    FooterComponent,
     HeaderComponent,
     FooterComponent,
-    HighlightDirective,
+    HighlightDirective
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    HighlightDirective
+    HighlightDirective,
+    FooterComponent
   ],
   imports: [
     CommonModule,

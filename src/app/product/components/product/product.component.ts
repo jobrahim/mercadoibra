@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter, OnChanges, DoCheck, OnInit, OnDestroy} from '@angular/core';
-import { Products } from '../product.model';
+import { Product } from '../../../product.model';
 
 @Component({
     selector: 'app-product',
@@ -8,7 +8,7 @@ import { Products } from '../product.model';
 })
 export class ProductComponent implements OnChanges, OnInit, OnDestroy {
 
-    @Input() producto: Products;
+    @Input() producto: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
     today = new Date();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Products } from '../product.model';
+import { Product } from '../../../product.model';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Products } from '../product.model';
 })
 export class ProductsComponent implements OnInit {
 
-  producto: Products[] = [
+  producto: Product[] = [
     {
       id: '1',
       nombre: 'semillas secas',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Products} from '../../../product.model';
+import {Product} from '../../../product.model';
 
 
 @Injectable({
@@ -7,7 +7,7 @@ import {Products} from '../../../product.model';
 })
 export class ProductsService {
 
-  producto: Products[] = [
+  producto: Product[] = [
     {
       id: '1',
       nombre: 'semillas secas',
