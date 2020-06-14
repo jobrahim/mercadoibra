@@ -4,8 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { RouterModule } from '@angular/router';
-
-
+import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -13,17 +13,20 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HeaderComponent,
     FooterComponent,
-    HighlightDirective
+    HighlightDirective,
+    ExponentialPipe,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     HighlightDirective,
-    FooterComponent
+    FooterComponent,
+    ExponentialPipe,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule,
   ]
 })
 export class SharedModule { }

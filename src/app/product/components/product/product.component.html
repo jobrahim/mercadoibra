@@ -5,7 +5,7 @@
 <p> {{ producto.precio | currency }}</p>
 <p> {{ today | date: 'medium' }}</p>
 <p> <strong>Descripción:</strong>  {{ producto.descripcion  | slice:0:50}}</p>
-<button (click)="comprar()">Agregar al carrito </button>
+<button (click)="comprar()" mat-raised-button color="primary">Agregar al carrito </button>
 <p></p>
 <a [routerLink] = "['/products', producto.id]">Ver detalle</a>
   
