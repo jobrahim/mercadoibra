@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ContactComponent } from 'mercadoibra/src/app/contact/contact.component';
+import { ContactComponent } from './components/contact.component';
 
 
 const routes: Routes = [

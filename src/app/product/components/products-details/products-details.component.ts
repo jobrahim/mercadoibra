@@ -10,7 +10,7 @@ import {Product} from '../../../product.model';
 })
 export class ProductsDetailsComponent implements OnInit {
 
-  producto: Product;
+  product: Product[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +20,7 @@ export class ProductsDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      this.producto = this.productService.getProduct(id);
+      this.product = this.productService.getProduct(id);
     });
   }
 

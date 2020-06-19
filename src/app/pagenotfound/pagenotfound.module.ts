@@ -1,7 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagenotfoundComponent } from 'mercadoibra/src/app/pagenotfound/pagenotfound.component';
-import { SharedModule } from 'mercadoibra/src/app/shared/shared.module';
+import { PagenotfoundComponent } from './components/pagenotfound.component';
+import { SharedModule } from './../shared/shared.module';
 import { PagenotfoundRoutingModule } from './pagenotfound-routing.module';
 
 

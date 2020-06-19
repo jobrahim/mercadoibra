@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { PagenotfoundComponent } from 'mercadoibra/src/app/pagenotfound/pagenotfound.component';
+import { PagenotfoundComponent } from './components/pagenotfound.component';
 
 
 const routes: Routes = [

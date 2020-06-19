@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-
 import { ProductsComponent } from './components/products/products.component';
-import { ProductsDetailsComponent } from 'mercadoibra/src/app/products-details/products-details.component';
+import { ProductsDetailsComponent } from './../product/components/products-details/products-details.component';
 
 const routes: Routes = [
   {

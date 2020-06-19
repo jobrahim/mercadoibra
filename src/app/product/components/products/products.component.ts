@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../product.model';
+import { ProductsService } from './../../../core/services/product/products.service';
 
 
 @Component({
@@ -9,50 +10,29 @@ import { Product } from '../../../product.model';
 })
 export class ProductsComponent implements OnInit {
 
-  producto: Product[] = [
-    {
-      id: '1',
-      nombre: 'semillas secas',
-      imagen: 'assets/images/semillas.png',
-      precio: 3000,
-      descripcion: 'para suelos secos no necesita glifosato'
+  product: Product[] = [];
 
-    },
-    {
-      id: '2',
-      nombre: 'hibridos',
-      imagen: 'assets/images/semillas1.png',
-      precio: 6000,
-      descripcion: 'para suelos humedos, funciona en invierno'
-
-    },
-    {
-      id: '3',
-      nombre: 'hervidas',
-      imagen: 'assets/images/semillas2.png',
-      precio: 4000,
-      descripcion: 'funciona en cualquier tipo de suelo, necesita glifosato'
-    },
-    {
-      id: '4',
-      nombre: 'organicas',
-      imagen: 'assets/images/semillas3.png',
-      precio: 11000,
-      descripcion: 'perfecto con el uso de roundup y Virtus turbo'
-    },
-  ];
-
-  constructor() { }
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
 
 
 
 ngOnInit(): void {
+  this.fetchProduct();
 }
 
   clickProduct(id: string){
     console.log('product');
     console.log(id);
+  }
+
+  fetchProduct(){
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      this.product = products;
+      });
   }
 
 }
