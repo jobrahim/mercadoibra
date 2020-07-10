@@ -7,14 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  title = 'mercadoibra';
+  title = 'Mercadoibra';
 
-  items = ['nicolas', 'julian', 'ramon'];
+  items = ['nicolas', 'julian', 'perez'];
+
+  objeto = {};
+
+  power = 10;
 
   ngOnInit() {
+    // code
   }
 
   addItem() {
     this.items.push('nuevo item');
   }
+
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+  }
+
 }

@@ -1,33 +1,40 @@
-import {Component, Input, Output, EventEmitter, OnChanges, DoCheck, OnInit, OnDestroy} from '@angular/core';
-import { Product } from '../../../product.model';
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnInit,
+    OnDestroy
+  } from '@angular/core';
+import { Product } from '../../../core/models/product.model';
 
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
     styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnChanges, OnInit, OnDestroy {
+export class ProductComponent implements OnInit, OnDestroy {
 
-    @Input() producto: Product;
-    @Output() productClicked: EventEmitter<any> = new EventEmitter();
+    @Input() product: Product;
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-    today = new Date();
+  today = new Date();
 
-    ngOnInit(){
-        console.log('1. ngOnInit');
-    }
-    ngOnChanges(){
-        console.log('2. ngOnChanges');
-    }
-    ngOnDestroy(){
-        console.log('3. ngOnDestroy');
-    }
+  constructor() {
+    console.log('1. constructor');
+  }
 
-    compra = ['pedro', 'juan', 'jose'];
+  ngOnInit() {
+    console.log('3. ngOnInit');
+  }
 
-    comprar() {
-        this.compra.push('nuevo');
-        console.log('añadir al carro');
-    }
+  ngOnDestroy() {
+    console.log('5. ngOnDestroy');
+  }
+
+  addCart() {
+    console.log('añadir al carrito');
+    this.productClicked.emit(this.product.id);
+  }
 
     }

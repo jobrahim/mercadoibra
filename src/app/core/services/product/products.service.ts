@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Product} from '../../../product.model';
+import {Product} from '../../models/product.model';
 import { HttpClient } from '@angular/common/http';
-
+import {environment} from './../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +13,14 @@ export class ProductsService {
   ) { }
 
   getAllProducts() {
-    return this.http.get<Product[]>('http://localhost:8088/Mercadoibra/products');
+    return this.http.get<Product[]>(`${environment.url_api}/products`);
   }
 
   getProduct(id: string) {
-
-    return this.http.get('http://localhost:8088/Mercadoibra/products/${id}');
+    return this.http.get<Product>(`${environment.url_api}/products/${id}`);
   }
 
+  createProduct(product: Product) {
+    return this.http.post(`${environment.url_api}/products`, product);
+  }
 }
