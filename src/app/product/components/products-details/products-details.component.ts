@@ -24,7 +24,7 @@ export class ProductsDetailsComponent implements OnInit {
         // this.product = this.productsService.getProduct(id);
       });
     }
-  
+
     fetchProduct(id: string) {
       this.productsService.getProduct(id)
       .subscribe(product => {
@@ -32,12 +32,12 @@ export class ProductsDetailsComponent implements OnInit {
       });
     }
 
-    
+
   createProduct() {
     const newProduct: Product = {
       id: '222',
       title: 'nuevo desde angular',
-      image: 'assets/images/banner-1.jpg',
+      image: 'assets/images/pin.png',
       price: 3000,
       description: 'nuevo producto'
     };
@@ -45,6 +45,27 @@ export class ProductsDetailsComponent implements OnInit {
     .subscribe(product => {
       console.log(product);
     });
+
   }
 
+  updateProduct() {
+
+    const updateProduct: Partial<Product> = {
+      title: 'producto editado',
+      price: 25000,
+      description: 'titulo modificado'
+    };
+
+    this.productsService.updateProduct('222', updateProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+  }
+
+  deleteProduct() {
+    this.productsService.deleteProduct('222')
+    .subscribe(rta => {
+      console.log(rta);
+    });
+  }
 }
