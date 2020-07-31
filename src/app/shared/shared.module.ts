@@ -6,6 +6,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { RouterModule } from '@angular/router';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     RouterModule,
     MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
